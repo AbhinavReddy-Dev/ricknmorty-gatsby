@@ -1,9 +1,10 @@
 {
-  "name": "gatsby-tailwind-styled-components-starter",
-  "description": "A Gatsby Starter With Tailwind CSS + Emotion Js",
+  "name": "rick-and-morty-gatsby-glitter-project",
+  "description": "A Rick and morty gatsby glitter project",
   "version": "1.0.0",
-  "author": "Muhammad Muhajir <muhajirframe@gmail.com>",
+  "author": "Abhinav Reddy",
   "dependencies": {
+    "axios": "^0.21.1",
     "babel-plugin-styled-components": "^1.8.0",
     "gatsby": "^2.0.0",
     "gatsby-plugin-manifest": "^2.0.2",
@@ -15,6 +16,12 @@
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "rickmortyapi": "^0.3.0",
     "styled-components": "^4.1.1",
     "tailwindcss": "^0.6.6"
   },
@@ -36,6 +43,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-tailwind-emotion-starter"
+    "url": "https://github.com/AbhinavReddy-Dev/ricknmorty-gatsby"
   }
 }

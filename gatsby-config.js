@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Tailwind Styled Components Starter',
+    title: 'Rick 🤮 and Morty 😐  Gatsby ✨ Silly Site Shit 💩',
   },
   plugins: [
     'gatsby-plugin-tailwindcss',
@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-tailwind-styled-components-starter',
+        name: 'ricknmorty-gatsby',
         short_name: 'starter',
         start_url: '/',
         background_color: '#663399',
