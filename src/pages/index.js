@@ -137,8 +137,8 @@ const IndexPage = ({ fetchEpisodes, episodes }) => {
           fontWeight: 'lighter',
         }}
       >
-        Content from 'rickandmortyapi.com', made for GatsbyJs Silly Site
-        Challenge 2020
+        Rick and Morty Content from 'rickandmortyapi.com', built with GatsbyJs
+        and made for GatsbyJs Silly Site Challenge 2020
       </p>
       <p
         style={{
