@@ -67,3 +67,20 @@ export const randomBetweenRange = (num = 20, range = [1, 671]) => {
 }
 
 // console.log(randomBetweenRange());
+
+// Voices
+
+export const voices = [
+  'http://peal.io/p/lick-lick-lick-my-balls-hahaha-yeah',
+  'https://peal.io/p/i-don-t-give-a-f-k-what-you-think',
+  'https://peal.io/p/this-is-how-you-dream-bitch',
+  'https://peal.io/p/whatever',
+  'https://peal.io/p/who-the-fuck-are-you-78f1b0b0-4e04-4a97-b5cb-832d070fe0fe',
+  'https://peal.io/p/and-that-s-why-i-always-say-shum-shum-shlippity-dub',
+  'https://peal.io/p/rick-on-love',
+  'https://peal.io/p/i-m-gonna-need-you-to-put-it-way-up-inside-your-butthole',
+  'https://peal.io/p/wubba-lubba-dub-dub',
+  'https://peal.io/p/yes-fuck-you-god-not-today-bitch',
+]
+// const [voice, setVoice] = useState('https://peal.io/p/whatever')
+// setVoice(voices[Math.floor(Math.random() * voices.length)])

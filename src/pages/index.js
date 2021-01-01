@@ -13,13 +13,38 @@ const IndexPage = ({ fetchEpisodes, episodes }) => {
   const [display, setDisplay] = useState(false)
   var [statusCheck, setStatusCheck] = useState([])
 
-  const playAudio = () => {
-    const audioEl = document.getElementsByClassName('audio-element')[0]
+  function playAudio() {
+    const audioEl =
+      typeof document !== 'undefined' &&
+      document.getElementsByClassName('audio-element')[0]
     audioEl.play()
+
+    // const promise = audioEl.play()
+
+    // if (promise !== undefined) {
+    //   promise.then(() => {}).catch(error => console.error)
+    // }
   }
 
   useEffect(() => {
-    console.log(typeof characters)
+    // if (typeof document !== `undefined`) {
+    //   function unlockAudio() {
+    //     const sound = document.getElementsByClassName('audio-element')[0]
+
+    //     sound.play()
+    //     sound.pause()
+    //     sound.currentTime = 0
+
+    //     document.body.removeEventListener('click', unlockAudio)
+    //     document.body.removeEventListener('touchstart', unlockAudio)
+    //   }
+
+    //   document.body.addEventListener('click', unlockAudio)
+    //   document.body.addEventListener('touchstart', unlockAudio)
+    //   // unlockAudio()
+    // }
+
+    // console.log(typeof characters)
     async function fetchData() {
       var results = await getCharacter(randomBetweenRange())
       results = results.filter(charac => charac.status !== 'unknown')
@@ -38,12 +63,13 @@ const IndexPage = ({ fetchEpisodes, episodes }) => {
       }, 1500)
     }
     characters.length === 0 && fetchData()
+    // playAudio()
     // const earth = await getLocation(1)
     // const episodeOne = await getEpisode(1)
     // console.log('UE char', character)
     // console.log(isCharDead)
   }, [characters])
-  console.log(characters, statusCheck)
+  // console.log(characters, statusCheck)
 
   function onClick(id) {
     console.log('char ID', id)
