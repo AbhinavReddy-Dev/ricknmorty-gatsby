@@ -12,6 +12,12 @@ const IndexPage = ({ fetchEpisodes, episodes }) => {
   const [characters, setCharacters] = useState([])
   const [display, setDisplay] = useState(false)
   var [statusCheck, setStatusCheck] = useState([])
+
+  const playAudio = () => {
+    const audioEl = document.getElementsByClassName('audio-element')[0]
+    audioEl.play()
+  }
+
   useEffect(() => {
     console.log(typeof characters)
     async function fetchData() {
@@ -66,6 +72,9 @@ const IndexPage = ({ fetchEpisodes, episodes }) => {
         Click on the cards to mark them alive and then check who's dead 💀 and
         who's alive 😇
       </h4>
+      <audio className="audio-element">
+        <source src="http://peal.io/p/lick-lick-lick-my-balls-hahaha-yeah"></source>
+      </audio>
       <div
         style={{
           marginTop: '3rem',
@@ -82,7 +91,10 @@ const IndexPage = ({ fetchEpisodes, episodes }) => {
             cursor: 'pointer',
             boxShadow: '0 2px 4px 0 whitesmoke',
           }}
-          onClick={() => setDisplay(!display)}
+          onClick={() => {
+            playAudio()
+            setDisplay(!display)
+          }}
         >
           Check 💀
         </button>
