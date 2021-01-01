@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Rick 🤮 and Morty 😐  Gatsby ✨ Silly Site Shit 💩',
+    title: "Rick 🤮 and Morty 😐 's Gatsby ✨ Silly Site Challenge 2020 💩",
   },
   plugins: [
     'gatsby-plugin-tailwindcss',

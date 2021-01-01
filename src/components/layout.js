@@ -8,7 +8,18 @@ import Header from './header'
 import './layout.css'
 
 const Content = styled.div`
-  ${tw`px-32 py-8 font-sans`};
+  ${tw`px-5 py-8 font-sans`};
+  /* margin: 1rem auto; */
+  text-align: center;
+  background-color: black;
+  color: #fff;
+  h1 {
+    font-weight: normal;
+  }
+  h3,
+  h4 {
+    font-weight: normal;
+  }
 `
 
 const Layout = ({ children }) => (
