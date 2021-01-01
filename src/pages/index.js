@@ -18,7 +18,22 @@ const IndexPage = ({ fetchEpisodes, episodes }) => {
       typeof document !== 'undefined' &&
       document.getElementsByClassName('audio-element')[0]
     audioEl.play()
+    // var promise =
+    //   typeof document !== undefined &&
+    //   document.getElementsByClassName('audio-element')[0]
 
+    // if (promise !== `undefined`) {
+    //   promise
+    //     .catch(error => {
+    //       console.log(error)
+    //       // Auto-play was prevented
+    //       // Show a UI element to let the user manually start playback
+    //     })
+    //     .then(() => {
+    //       // Auto-play started
+    //       promise.play()
+    //     })
+    // }
     // const promise = audioEl.play()
 
     // if (promise !== undefined) {
