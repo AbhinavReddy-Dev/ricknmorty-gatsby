@@ -7,59 +7,25 @@ import { fetchEpisodes } from '../redux'
 import { getCharacter, getLocation, getEpisode } from 'rickmortyapi'
 import { CharacterCard } from '../styles/character'
 import { width } from '../../tailwind'
-import { randomBetweenRange } from '../styles/utilities'
+import { randomBetweenRange, voices } from '../styles/utilities'
 const IndexPage = ({ fetchEpisodes, episodes }) => {
   const [characters, setCharacters] = useState([])
   const [display, setDisplay] = useState(false)
   var [statusCheck, setStatusCheck] = useState([])
-
+  const [voice, setVoice] = useState(
+    voices[Math.floor(Math.random() * voices.length)]
+  )
   function playAudio() {
-    const audioEl =
-      typeof document !== 'undefined' &&
-      document.getElementsByClassName('audio-element')[0]
+    const audioEl = new Audio(voice)
+    // typeof document !== 'undefined' &&
+    // document.getElementsByClassName('audio-element')[0]
     audioEl.play()
-    // var promise =
-    //   typeof document !== undefined &&
-    //   document.getElementsByClassName('audio-element')[0]
+    setVoice(voices[Math.floor(Math.random() * voices.length)])
 
-    // if (promise !== `undefined`) {
-    //   promise
-    //     .catch(error => {
-    //       console.log(error)
-    //       // Auto-play was prevented
-    //       // Show a UI element to let the user manually start playback
-    //     })
-    //     .then(() => {
-    //       // Auto-play started
-    //       promise.play()
-    //     })
-    // }
-    // const promise = audioEl.play()
-
-    // if (promise !== undefined) {
-    //   promise.then(() => {}).catch(error => console.error)
-    // }
+    // console.log(voice, audioEl)
   }
 
   useEffect(() => {
-    // if (typeof document !== `undefined`) {
-    //   function unlockAudio() {
-    //     const sound = document.getElementsByClassName('audio-element')[0]
-
-    //     sound.play()
-    //     sound.pause()
-    //     sound.currentTime = 0
-
-    //     document.body.removeEventListener('click', unlockAudio)
-    //     document.body.removeEventListener('touchstart', unlockAudio)
-    //   }
-
-    //   document.body.addEventListener('click', unlockAudio)
-    //   document.body.addEventListener('touchstart', unlockAudio)
-    //   // unlockAudio()
-    // }
-
-    // console.log(typeof characters)
     async function fetchData() {
       var results = await getCharacter(randomBetweenRange())
       results = results.filter(charac => charac.status !== 'unknown')
@@ -78,13 +44,7 @@ const IndexPage = ({ fetchEpisodes, episodes }) => {
       }, 1500)
     }
     characters.length === 0 && fetchData()
-    // playAudio()
-    // const earth = await getLocation(1)
-    // const episodeOne = await getEpisode(1)
-    // console.log('UE char', character)
-    // console.log(isCharDead)
   }, [characters])
-  // console.log(characters, statusCheck)
 
   function onClick(id) {
     console.log('char ID', id)
@@ -113,9 +73,10 @@ const IndexPage = ({ fetchEpisodes, episodes }) => {
         Click on the cards to mark them alive and then check who's dead 💀 and
         who's alive 😇
       </h4>
-      <audio className="audio-element">
-        <source src="http://peal.io/p/lick-lick-lick-my-balls-hahaha-yeah"></source>
-      </audio>
+      {/* <audio className="audio-element">
+        <source src={voice}></source>
+      </audio> */}
+
       <div
         style={{
           marginTop: '3rem',
@@ -149,7 +110,10 @@ const IndexPage = ({ fetchEpisodes, episodes }) => {
             cursor: 'pointer',
             boxShadow: '0 2px 4px 0 whitesmoke',
           }}
-          onClick={() => setCharacters([])}
+          onClick={() => {
+            setVoice(voices[Math.floor(Math.random() * voices.length)])
+            setCharacters([])
+          }}
         >
           Re-Fetch 🤟🏻
         </button>
@@ -187,10 +151,31 @@ const IndexPage = ({ fetchEpisodes, episodes }) => {
 
       <p
         style={{
+          fontSize: '.9rem',
+
           fontWeight: 'lighter',
         }}
       >
-        Rick and Morty Content from 'rickandmortyapi.com', built with GatsbyJs
+        Rick and Morty Content from 'rickandmortyapi.com' and 'peal.io', built
+        with{' '}
+        <span
+          style={{
+            color: 'pink',
+          }}
+        >
+          GatsbyJs
+        </span>{' '}
+        by{' '}
+        <span>
+          <a
+            href="https://github.com/AbhinavReddy-Dev"
+            style={{
+              color: 'salmon',
+            }}
+          >
+            Abhinav Reddy
+          </a>
+        </span>{' '}
         and made for GatsbyJs Silly Site Challenge 2020
       </p>
       <p
@@ -203,6 +188,8 @@ const IndexPage = ({ fetchEpisodes, episodes }) => {
       </p>
       <a
         style={{
+          fontSize: '.7rem',
+
           color: 'papayawhip',
         }}
         href="https://github.com/AbhinavReddy-Dev/ricknmorty-gatsby"

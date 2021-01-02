@@ -71,16 +71,23 @@ export const randomBetweenRange = (num = 20, range = [1, 671]) => {
 // Voices
 
 export const voices = [
-  'http://peal.io/p/lick-lick-lick-my-balls-hahaha-yeah',
-  'https://peal.io/p/i-don-t-give-a-f-k-what-you-think',
-  'https://peal.io/p/this-is-how-you-dream-bitch',
-  'https://peal.io/p/whatever',
-  'https://peal.io/p/who-the-fuck-are-you-78f1b0b0-4e04-4a97-b5cb-832d070fe0fe',
-  'https://peal.io/p/and-that-s-why-i-always-say-shum-shum-shlippity-dub',
-  'https://peal.io/p/rick-on-love',
-  'https://peal.io/p/i-m-gonna-need-you-to-put-it-way-up-inside-your-butthole',
-  'https://peal.io/p/wubba-lubba-dub-dub',
-  'https://peal.io/p/yes-fuck-you-god-not-today-bitch',
+  'http://peal.io/download/ldaze',
+  'http://peal.io/download/d65d9',
+  'http://peal.io/download/rttym',
+  'http://peal.io/download/s2m8i',
+  'http://peal.io/download/tvqbh',
+  'http://peal.io/download/74hun',
+  'http://peal.io/download/21deq',
+  'http://peal.io/download/upr8x',
+  'http://peal.io/download/fijtn',
+  'http://peal.io/download/79qmp',
+  'http://peal.io/download/ese2n',
+  'http://peal.io/download/o3b9s',
+  'http://peal.io/download/ifr5e',
+  'http://peal.io/download/j9cxx',
+  'http://peal.io/download/qfgjc',
+  'http://peal.io/download/ogq4w',
+  'http://peal.io/download/elcp9',
 ]
 // const [voice, setVoice] = useState('https://peal.io/p/whatever')
 // setVoice(voices[Math.floor(Math.random() * voices.length)])
