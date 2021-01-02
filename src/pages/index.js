@@ -26,6 +26,7 @@ const IndexPage = ({ fetchEpisodes, episodes }) => {
   }
 
   useEffect(() => {
+    console.log('You creepy Tech Shit Biatch!')
     async function fetchData() {
       var results = await getCharacter(randomBetweenRange())
       results = results.filter(charac => charac.status !== 'unknown')
@@ -47,7 +48,7 @@ const IndexPage = ({ fetchEpisodes, episodes }) => {
   }, [characters])
 
   function onClick(id) {
-    console.log('char ID', id)
+    // console.log('char ID', id)
     var updatedStatusCheck = statusCheck.map(status =>
       status.id === id
         ? {
