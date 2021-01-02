@@ -111,6 +111,7 @@ const IndexPage = ({ fetchEpisodes, episodes }) => {
             boxShadow: '0 2px 4px 0 whitesmoke',
           }}
           onClick={() => {
+            setDisplay(false)
             setVoice(voices[Math.floor(Math.random() * voices.length)])
             setCharacters([])
           }}
